@@ -1,3 +1,7 @@
+.react-bs-table-container {
+  margin: 5px 10px;
+}
+
 .tr-string-example{
     font-style: oblique;
     color: red;
@@ -36,4 +40,16 @@
 
 .my-body-class {
   background-color: #CC00FF;
+}
+
+.my-container-class {
+  border: #0000FF 2.5px solid;
+}
+
+.my-table-container-class {
+  border: #FFBB73 5px solid;
+}
+
+.class-for-editing-cell {
+    background-color: #FFBB73;
 }

@@ -6,6 +6,7 @@ import HoverStripedTable from './hover-striped-table';
 import BorderlessTable from './borderless-table';
 import ScrollTable from './scroll-table';
 import LargeColumnTable from './large-column-table';
+import NoDataTable from './no-data-table';
 
 import renderLinks from '../utils';
 
@@ -18,6 +19,14 @@ class Demo extends React.Component {
         <Panel header={ 'A basic react-bootstrap-table' }>
           { renderLinks('basic/basic-table.js') }
           <BasicTable/>
+        </Panel>
+        <Panel header={ 'Empty Table Example' }>
+          { renderLinks('basic/no-data-table.js') }
+          <span>
+            Use <code>noDataText</code> to custom the text if table is empty<br/>
+            Use <code>withoutNoDataText</code> to hide the table body if table is empty<br/>
+          </span>
+          <NoDataTable/>
         </Panel>
         <Panel header={ 'A Single Column react-bootstrap-table' }>
           { renderLinks('basic/single-column-table.js') }
@@ -42,6 +51,9 @@ class Demo extends React.Component {
         </Panel>
         <Panel header={ 'Table Scroll Example' }>
           { renderLinks('basic/scroll-table') }
+          <span style={ { color: 'red' } }>
+            You can use <code>scrollTop</code> to set the table content scroll, available value is <code>Top</code>, <code>Bottom</code> and a numeric value
+          </span>
           <ScrollTable/>
         </Panel>
       </Col>
