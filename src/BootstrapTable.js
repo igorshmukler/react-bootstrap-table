@@ -1586,7 +1586,7 @@ BootstrapTable.propTypes = {
   exportCSV: PropTypes.bool,
   csvFileName: PropTypes.oneOfType([ PropTypes.string, PropTypes.func ]),
   ignoreSinglePage: PropTypes.bool,
-  showFooter: PropTypes.bool
+  showFooter: PropTypes.bool,
   expandableRow: PropTypes.func,
   expandComponent: PropTypes.func,
   expandColumnOptions: PropTypes.shape({
