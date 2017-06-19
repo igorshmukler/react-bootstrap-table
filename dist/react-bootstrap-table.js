@@ -18965,8 +18965,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    type: _react.PropTypes.oneOf(filterTypeArray),
 	    delay: _react.PropTypes.number,
 	    options: _react.PropTypes.oneOfType([_react.PropTypes.object, // for SelectFilter
-	    _react.PropTypes.arrayOf(_react.PropTypes.number // for NumberFilter
-	    )]),
+	    _react.PropTypes.arrayOf(_react.PropTypes.number) // for NumberFilter
+	    ]),
 	    numberComparators: _react.PropTypes.arrayOf(_react.PropTypes.string),
 	    emitter: _react.PropTypes.object,
 	    placeholder: _react.PropTypes.string,
