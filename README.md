@@ -7,7 +7,7 @@
 [![Dependency Status][deps-badge]][deps]
 [![devDependency Status][dev-deps-badge]][dev-deps]
 [![peerDependency Status][peer-deps-badge]][peer-deps]   
-It's a [react.js](http://facebook.github.io/react/) table for bootstrap, named react-bootstrap-table. It's a configurable, functional table component and make you build a Bootstrap Table more efficiency and easy in your React application, However ```react-bootstrap-table``` support these features:
+It's a [react.js](http://facebook.github.io/react/) table for bootstrap, named react-bootstrap-table. It's a configurable, functional table component and make you build a Bootstrap Table more efficiency and easy in your React application. At this time ```react-bootstrap-table``` supports the below features:
 
 - Striped, Borderless, Condensed table
 - Column align, hidden, width, sort, title, styling
@@ -19,6 +19,7 @@ It's a [react.js](http://facebook.github.io/react/) table for bootstrap, named r
 - Cell edit with multi type editor
 - Insert & delete Row
 - Table, row and column styling
+- Footer
 - Search
 - Export to CSV
 - Rich function hooks
@@ -33,6 +34,16 @@ Explore more example on [examples](https://github.com/AllenFang/react-bootstrap-
 See more about [react-bootstrap-table](http://allenfang.github.io/react-bootstrap-table/index.html).</br>
 Check [this](http://allenfang.github.io/react-bootstrap-table/advance.html) for more advance usage for ```react-bootstrap-table```. Feel free to ask more examples.</br>
 Check the <a href='https://github.com/AllenFang/react-bootstrap-table/blob/master/CHANGELOG.md'>CHANGELOG</a> for more detail release notes.
+
+## Footer support
+```<BootstrapTable data={ data } style={{ style }} showFooter={ true } >
+  <TableHeaderColumn row='1' dataField='name' isKey={ true } dataSort={true} footerText='Total' >Intent</TableHeaderColumn>
+  <TableHeaderColumn row='1' dataField='type' dataSort={ true } footerText=' ' >Type</TableHeaderColumn>
+  <TableHeaderColumn row='1' dataField='count' dataSort={ true } footerText={ total } >Count</TableHeaderColumn>
+  <TableHeaderColumn row='1' dataField='execution' dataSort={ true } footerText=' ' >Execution</TableHeaderColumn>
+  <TableHeaderColumn row='1' dataField='seen' dataSort={ true } footerText=' ' >Seen</TableHeaderColumn>
+</BootstrapTable>
+```
 
 ## Notes
 ***`v4.0.0-beta.1` published, this release is for replacing `react-toastr` with `react-s-alert`, check [PR#1216](https://github.com/AllenFang/react-bootstrap-table/pull/1216) and after `v4.0.0`, `react-bootstrap-table` will use `react-s-alert` for notification***
