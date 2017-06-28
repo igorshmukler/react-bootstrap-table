@@ -37,8 +37,8 @@ Check the <a href='https://github.com/AllenFang/react-bootstrap-table/blob/maste
 
 ## Footer support
 ```js
-<BootstrapTable data={ data } style={{ style }} showFooter={ true } >
-  <TableHeaderColumn row='1' dataField='name' isKey={ true } dataSort={true} footerText='Total' >Intent</TableHeaderColumn>
+<BootstrapTable data={ data } style={ style } showFooter={ true } >
+  <TableHeaderColumn row='1' dataField='name' isKey={ true } dataSort={ true } footerText='Total' >Intent</TableHeaderColumn>
   <TableHeaderColumn row='1' dataField='type' dataSort={ true } footerText=' ' >Type</TableHeaderColumn>
   <TableHeaderColumn row='1' dataField='count' dataSort={ true } footerText={ total } >Count</TableHeaderColumn>
   <TableHeaderColumn row='1' dataField='execution' dataSort={ true } footerText=' ' >Execution</TableHeaderColumn>

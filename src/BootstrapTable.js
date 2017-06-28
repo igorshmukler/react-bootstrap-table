@@ -374,7 +374,6 @@ class BootstrapTable extends Component {
     const sortList = this.store.getSortInfo();
     const pagination = this.renderPagination();
     const toolBar = this.renderToolBar();
-/*    const tableFooter = this.renderTableFooter(); */
     const tableFilter = this.renderTableFilter(columns);
     const isSelectAll = this.isSelectAll();
     const expandColumnOptions = this.props.expandColumnOptions;
@@ -1290,24 +1289,7 @@ class BootstrapTable extends Component {
       return null;
     }
   }
-/*
-  renderTableFooter() {
-    if (this.props.showFooter) {
-      return (
-        <TableFooter
-          ref='footer'
-          tableFooterClass={ this.props.tableFooterClass }
-          style={ this.props.headerStyle }
-          hideSelectColumn={ this.props.selectRow.hideSelectColumn }
-          bordered={ this.props.bordered }
-          condensed={ this.props.condensed }
-          isFiltered={ this.filter ? true : false }>
-          { this.props.children }
-        </TableFooter>);
-    }
-    return null;
-  }
- */
+
   _scrollTop = () => {
     const { scrollTop } = this.props;
     if (scrollTop === Const.SCROLL_TOP) {
