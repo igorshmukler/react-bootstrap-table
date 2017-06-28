@@ -710,7 +710,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var sortList = this.store.getSortInfo();
 	      var pagination = this.renderPagination();
 	      var toolBar = this.renderToolBar();
-	      var tableFooter = this.renderTableFooter();
+	      /*    const tableFooter = this.renderTableFooter(); */
 	      var tableFilter = this.renderTableFilter(columns);
 	      var isSelectAll = this.isSelectAll();
 	      var expandColumnOptions = this.props.expandColumnOptions;
@@ -801,7 +801,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	            onNavigateCell: this.handleNavigateCell,
 	            x: this.state.x,
 	            y: this.state.y }),
-	          tableFooter
+	          this.props.showFooter ? _react2.default.createElement(
+	            _TableFooter2.default,
+	            {
+	              ref: 'footer',
+	              tableFooterClass: this.props.tableFooterClass,
+	              style: this.props.headerStyle,
+	              hideSelectColumn: this.props.selectRow.hideSelectColumn,
+	              bordered: this.props.bordered,
+	              condensed: this.props.condensed,
+	              isFiltered: this.filter ? true : false,
+	              colGroups: colGroups },
+	            this.props.children
+	          ) : null
 	        ),
 	        tableFilter,
 	        showPaginationOnBottom ? pagination : null
@@ -1725,25 +1737,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return null;
 	      }
 	    }
-	  }, {
-	    key: 'renderTableFooter',
-	    value: function renderTableFooter() {
-	      if (this.props.showFooter) {
-	        return _react2.default.createElement(
-	          _TableFooter2.default,
-	          {
-	            ref: 'footer',
-	            tableFooterClass: this.props.tableFooterClass,
-	            style: this.props.headerStyle,
-	            hideSelectColumn: this.props.selectRow.hideSelectColumn,
-	            bordered: this.props.bordered,
-	            condensed: this.props.condensed,
-	            isFiltered: this.filter ? true : false },
-	          this.props.children
-	        );
+	    /*
+	      renderTableFooter() {
+	        if (this.props.showFooter) {
+	          return (
+	            <TableFooter
+	              ref='footer'
+	              tableFooterClass={ this.props.tableFooterClass }
+	              style={ this.props.headerStyle }
+	              hideSelectColumn={ this.props.selectRow.hideSelectColumn }
+	              bordered={ this.props.bordered }
+	              condensed={ this.props.condensed }
+	              isFiltered={ this.filter ? true : false }>
+	              { this.props.children }
+	            </TableFooter>);
+	        }
+	        return null;
 	      }
-	      return null;
-	    }
+	     */
+
 	  }, {
 	    key: '___scrollTop__REACT_HOT_LOADER__',
 	    value: function ___scrollTop__REACT_HOT_LOADER__() {
@@ -2537,6 +2549,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          row
 	        );
 	      });
+	      console.log('TableHeader colGroups:', this.props.colGroups);
 
 	      return _react2.default.createElement(
 	        'div',
@@ -2743,16 +2756,16 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var TableHeader = function (_Component) {
-	  _inherits(TableHeader, _Component);
+	var TableFooter = function (_Component) {
+	  _inherits(TableFooter, _Component);
 
-	  function TableHeader() {
-	    _classCallCheck(this, TableHeader);
+	  function TableFooter() {
+	    _classCallCheck(this, TableFooter);
 
-	    return _possibleConstructorReturn(this, (TableHeader.__proto__ || Object.getPrototypeOf(TableHeader)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (TableFooter.__proto__ || Object.getPrototypeOf(TableFooter)).apply(this, arguments));
 	  }
 
-	  _createClass(TableHeader, [{
+	  _createClass(TableFooter, [{
 	    key: 'render',
 	    value: function render() {
 	      var containerClasses = (0, _classnames2.default)('react-bs-container-header', 'table-header-wrapper');
@@ -2763,6 +2776,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var selectRowHeaderCol = null;
 	      if (!this.props.hideSelectColumn) selectRowHeaderCol = this.renderSelectRowHeader();
 	      var i = 0;
+	      console.log('TableFooter colGroups:', this.props.colGroups);
 	      return _react2.default.createElement(
 	        'div',
 	        { ref: 'container', className: containerClasses, style: this.props.style },
@@ -2799,12 +2813,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }]);
 
-	  return TableHeader;
+	  return TableFooter;
 	}(_react.Component);
 
-	TableHeader.propTypes = {
+	TableFooter.propTypes = {
 	  tableHeaderClass: _react.PropTypes.string,
 	  style: _react.PropTypes.object,
+	  colGroups: _react.PropTypes.element,
 	  hideSelectColumn: _react.PropTypes.bool,
 	  bordered: _react.PropTypes.bool,
 	  condensed: _react.PropTypes.bool,
@@ -2812,7 +2827,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  sortIndicator: _react.PropTypes.bool
 	};
 
-	var _default = TableHeader;
+	var _default = TableFooter;
 	exports.default = _default;
 	;
 
@@ -2821,7 +2836,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(TableHeader, 'TableHeader', '/Users/shmukler/Projects/react-bootstrap-table/src/TableFooter.js');
+	  __REACT_HOT_LOADER__.register(TableFooter, 'TableFooter', '/Users/shmukler/Projects/react-bootstrap-table/src/TableFooter.js');
 
 	  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/shmukler/Projects/react-bootstrap-table/src/TableFooter.js');
 	}();

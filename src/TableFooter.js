@@ -3,7 +3,7 @@ import classSet from 'classnames';
 import Const from './Const';
 import SelectRowHeaderColumn from './SelectRowHeaderColumn';
 
-class TableHeader extends Component {
+class TableFooter extends Component {
 
   render() {
     const containerClasses = classSet('react-bs-container-header', 'table-header-wrapper');
@@ -14,6 +14,7 @@ class TableHeader extends Component {
     let selectRowHeaderCol = null;
     if (!this.props.hideSelectColumn) selectRowHeaderCol = this.renderSelectRowHeader();
     let i = 0;
+    console.log('TableFooter colGroups:', this.props.colGroups);
     return (
       <div ref='container' className={ containerClasses } style={ this.props.style }>
         <table className={ tableClasses }>
@@ -42,9 +43,10 @@ class TableHeader extends Component {
     }
   }
 }
-TableHeader.propTypes = {
+TableFooter.propTypes = {
   tableHeaderClass: PropTypes.string,
   style: PropTypes.object,
+  colGroups: PropTypes.element,
   hideSelectColumn: PropTypes.bool,
   bordered: PropTypes.bool,
   condensed: PropTypes.bool,
@@ -52,4 +54,4 @@ TableHeader.propTypes = {
   sortIndicator: PropTypes.bool
 };
 
-export default TableHeader;
+export default TableFooter;
