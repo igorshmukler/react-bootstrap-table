@@ -36,7 +36,8 @@ Check [this](http://allenfang.github.io/react-bootstrap-table/advance.html) for 
 Check the <a href='https://github.com/AllenFang/react-bootstrap-table/blob/master/CHANGELOG.md'>CHANGELOG</a> for more detail release notes.
 
 ## Footer support
-```<BootstrapTable data={ data } style={{ style }} showFooter={ true } >
+```js
+<BootstrapTable data={ data } style={{ style }} showFooter={ true } >
   <TableHeaderColumn row='1' dataField='name' isKey={ true } dataSort={true} footerText='Total' >Intent</TableHeaderColumn>
   <TableHeaderColumn row='1' dataField='type' dataSort={ true } footerText=' ' >Type</TableHeaderColumn>
   <TableHeaderColumn row='1' dataField='count' dataSort={ true } footerText={ total } >Count</TableHeaderColumn>
