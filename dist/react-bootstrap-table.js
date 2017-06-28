@@ -2783,6 +2783,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _react2.default.createElement(
 	          'table',
 	          { className: tableClasses },
+	          _react2.default.cloneElement(this.props.colGroups, { ref: 'headerGrp' }),
 	          _react2.default.createElement(
 	            'tfoot',
 	            null,

@@ -18,6 +18,7 @@ class TableFooter extends Component {
     return (
       <div ref='container' className={ containerClasses } style={ this.props.style }>
         <table className={ tableClasses }>
+          { React.cloneElement(this.props.colGroups, { ref: 'headerGrp' }) }
           <tfoot>
             <tr ref='footer'>
               { selectRowHeaderCol }
