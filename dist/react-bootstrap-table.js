@@ -2549,7 +2549,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	          row
 	        );
 	      });
-	      console.log('TableHeader colGroups:', this.props.colGroups);
 
 	      return _react2.default.createElement(
 	        'div',
@@ -2776,7 +2775,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var selectRowHeaderCol = null;
 	      if (!this.props.hideSelectColumn) selectRowHeaderCol = this.renderSelectRowHeader();
 	      var i = 0;
-	      console.log('TableFooter colGroups:', this.props.colGroups);
 	      return _react2.default.createElement(
 	        'div',
 	        { ref: 'container', className: containerClasses, style: this.props.style },

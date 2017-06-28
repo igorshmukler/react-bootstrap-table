@@ -14,7 +14,6 @@ class TableFooter extends Component {
     let selectRowHeaderCol = null;
     if (!this.props.hideSelectColumn) selectRowHeaderCol = this.renderSelectRowHeader();
     let i = 0;
-    console.log('TableFooter colGroups:', this.props.colGroups);
     return (
       <div ref='container' className={ containerClasses } style={ this.props.style }>
         <table className={ tableClasses }>

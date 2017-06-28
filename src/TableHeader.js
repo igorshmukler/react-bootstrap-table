@@ -95,7 +95,6 @@ class TableHeader extends Component {
         </tr>
       );
     });
-    console.log('TableHeader colGroups:', this.props.colGroups);
 
     return (
       <div ref='container' className={ containerClasses } style={ this.props.style }>
